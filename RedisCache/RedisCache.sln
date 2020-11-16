@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.RedisCache", "Foundation\RedisCache\Foundation.RedisCache.csproj", "{BA1E5C96-583B-4615-A0BC-C16BBBCF7033}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{E3DC1001-F309-45A1-A9F3-FC36FC5C4252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.DI", "Foundation\DI\Foundation.DI.csproj", "{6669071E-6308-4713-AEE1-A4146136049D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA1E5C96-583B-4615-A0BC-C16BBBCF7033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1E5C96-583B-4615-A0BC-C16BBBCF7033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1E5C96-583B-4615-A0BC-C16BBBCF7033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1E5C96-583B-4615-A0BC-C16BBBCF7033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6669071E-6308-4713-AEE1-A4146136049D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6669071E-6308-4713-AEE1-A4146136049D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6669071E-6308-4713-AEE1-A4146136049D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6669071E-6308-4713-AEE1-A4146136049D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA1E5C96-583B-4615-A0BC-C16BBBCF7033} = {E3DC1001-F309-45A1-A9F3-FC36FC5C4252}
+		{6669071E-6308-4713-AEE1-A4146136049D} = {E3DC1001-F309-45A1-A9F3-FC36FC5C4252}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {669E2F82-54B9-46B0-A1C8-1A966E602559}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
