@@ -17,7 +17,7 @@ namespace Foundation.RedisCache.Commands
 
             raiser.RaiseEvent(ev);
 
-            SheerResponse.Alert("Redis Cache flushed on all environments...");
+            SheerResponse.Alert("Redis Cache flushed");
         }
     }
 }

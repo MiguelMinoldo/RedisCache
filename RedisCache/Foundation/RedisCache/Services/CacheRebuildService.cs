@@ -18,13 +18,13 @@ namespace Foundation.RedisCache.Services
 
             if (string.IsNullOrEmpty(args.EventInfo.CacheKey) || args.EventInfo.CacheKey.Equals(Constants.ClearAll))
             {
-                Log.Info("UrlRewriting Cleaning ALL caches", this);
+                Log.Info("RedisCache Cleaning ALL caches", this);
 
                 cacheManager.ClearCache(sender, args);
             }
             else
             {
-                Log.Info($"UrlRewriting Cache clean - key:{args.EventInfo?.CacheKey} database:{args.EventInfo?.Database} field:{args.EventInfo?.Field}", this);
+                Log.Info($"RedisCache Cache clean - key:{args.EventInfo?.CacheKey} database:{args.EventInfo?.Database} field:{args.EventInfo?.Field}", this);
 
                 var allKeys = cacheManager.GetAllKeys();
                 var candidateKeys = allKeys.Where(s => s.ToString().Contains(args.EventInfo.Database) && s.ToString().Contains(args.EventInfo.Field));
@@ -37,7 +37,7 @@ namespace Foundation.RedisCache.Services
                     {
                         cacheManager.Remove(key);
 
-                        Log.Info($"UrlRewriting - Cleaning caches by key: {key}", this);
+                        Log.Info($"RedisCache - Cleaning caches by key: {key}", this);
                     }
                 }
 
@@ -50,7 +50,7 @@ namespace Foundation.RedisCache.Services
                         cacheManager.Remove(val);
                     }
 
-                    Log.Info($"UrlRewriting - Cleaning caches by key: {key}", this);
+                    Log.Info($"RedisCache - Cleaning caches by key: {key}", this);
                 }
             }
         }

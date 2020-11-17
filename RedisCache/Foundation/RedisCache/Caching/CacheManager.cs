@@ -8,7 +8,6 @@ using Foundation.RedisCache.Redis;
 using Newtonsoft.Json;
 
 using Sitecore;
-using Sitecore.Configuration;
 using Sitecore.Diagnostics;
 
 using StackExchange.Redis;
@@ -68,11 +67,11 @@ namespace Foundation.RedisCache.Caching
 
         public void ClearCache(object sender, EventArgs args)
         {
-            Log.Info($"UrlRewritting Cache Clearer.", this);
+            Log.Info($"RedisCache Cache Clearer.", this);
 
             _redisServer.FlushAllDatabases();
 
-            Log.Info("UrlRewritting Cache Clearer done.", (object)this);
+            Log.Info("RedisCache Cache Clearer done.", (object)this);
         }
 
         public TObj GetCachedObject<TObj>(string cacheKey, Func<TObj> creator) where TObj : class

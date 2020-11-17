@@ -4,10 +4,7 @@ using Foundation.RedisCache.Caching;
 using Foundation.RedisCache.Events;
 using Foundation.RedisCache.Events.CustomEventArgs;
 
-using Sitecore.DependencyInjection;
 using Sitecore.Pipelines;
-
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Foundation.RedisCache.Pipelines
 {

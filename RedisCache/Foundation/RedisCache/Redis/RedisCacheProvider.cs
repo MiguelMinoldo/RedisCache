@@ -11,7 +11,7 @@ namespace Foundation.RedisCache.Redis
     [Service(typeof(IRedisCacheProvider), Lifetime = Lifetime.Singleton)]
     public class RedisCacheProvider : IRedisCacheProvider
     {
-        private static Lazy<ConnectionMultiplexer> lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
+        private static readonly Lazy<ConnectionMultiplexer> LazyConnection = new Lazy<ConnectionMultiplexer>(() =>
         {
             var connectionString = ConfigurationManager.ConnectionStrings["redis.sessions"].ConnectionString;
             var options = ConfigurationOptions.Parse(connectionString);
@@ -23,7 +23,7 @@ namespace Foundation.RedisCache.Redis
             return ConnectionMultiplexer.Connect(options);
         });
 
-        public static ConnectionMultiplexer Connection => lazyConnection.Value;
+        public static ConnectionMultiplexer Connection => LazyConnection.Value;
 
         private readonly IDatabase _redisCache;
 
